@@ -1,0 +1,52 @@
+/* Calculator and Button Styles (existing styles are the same) */
+
+/* Clock and Alarm Styles */
+.clock {
+    text-align: center;
+    margin-top: 50px;
+    font-family: 'Arial', sans-serif;
+    color: white;
+}
+
+.clock-display {
+    font-size: 4em;
+    color: red;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.alarm-controls {
+    margin-top: 20px;
+}
+
+button {
+    padding: 15px;
+    font-size: 1.5em;
+    border: none;
+    border-radius: 10px;
+    background-color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin: 10px;
+}
+
+button:hover {
+    background-color: #03a9f4;
+}
+
+button:active {
+    background-color: #0288d1;
+}
+
+/* Shaking Effect */
+.shake {
+    animation: shake 0.5s ease-in-out;
+}
+
+@keyframes shake {
+    0% { transform: translateX(0); }
+    25% { transform: translateX(-10px); }
+    50% { transform: translateX(10px); }
+    75% { transform: translateX(-10px); }
+    100% { transform: translateX(0); }
+}

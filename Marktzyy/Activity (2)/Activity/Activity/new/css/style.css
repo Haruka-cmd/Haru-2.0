@@ -1,0 +1,77 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{
+    --bg:#F8FAB4;
+    --title:'Courier New', Courier, monospace;
+    --paragraph: Franklin Gothic Medium', 'Arial Narrow, Arial, sans-serif;
+    --bgg:#139930;
+}
+body{
+    font-family: var(-paragprah);
+    background: var(--bg);
+    color: aquamarine;
+}
+title{
+    font-size: 5em;
+    font-family: var(--title);
+    text-transform: capitalize;
+}
+h1{
+    color: black !important; 
+    
+}
+h1.title::first-letter{
+    font-size: 2em;
+}
+h1, h3, p{
+    color: azure;
+    text-shadow: 2px 2px 2px;
+    
+}
+.welcome, header, footer{
+    background-color: bisque;
+    text-align: center;
+    border: 2px solid;
+    width: 50%;
+    padding: 20px;
+    margin: 50px auto;
+    line-height: 3em;
+}
+.font-50{
+    font-size: 50px;
+}
+h1.font-50{
+    font-size: 60px;
+}
+p.note{
+    color: aquamarine;
+}
+#top{
+    color: blanchedalmond;
+    background-color: aquamarine;
+}
+header ul{
+    display: flex;
+    justify-content: space-evenly;
+}
+li>a{
+    text-decoration: none;
+    font-weight: bold;
+}
+section, h3{
+    font-style: italic;
+}
+a:link{
+ color: var(--bgg);
+}
+a:visited{
+    color: var(--bgg);
+}
+header li>a:hover{
+    background-color: purple;
+    padding: 20px;
+    border-radius: 5px;
+}

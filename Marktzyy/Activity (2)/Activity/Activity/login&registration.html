@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        
+        .nav-activities {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background-color: rgb(158, 163, 163);
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            padding: 15px 0;
+            border-style: double;
+            z-index: 1000;
+        }
+
+        .nav-activities a {
+            text-decoration: none;
+            color: black;
+            background-color: #FFE156;
+            padding: 10px 15px;
+            border: 2px solid black;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: background-color 0.3s;
+        }
+
+        .nav-activities a:hover {
+            background-color: #FFB830;
+            color: white;
+        }
+
+        
+        body {
+            padding-top: 90px;
+            font-family: Arial, sans-serif;
+        }
+    </style>
+</head>
+<body>
+
+    
+    <div class="nav-activities">
+        <a href="Lesson.html">Lesson</a>
+        <a href="Resume.html">Resume</a>
+        <a href="RecordSystem.html">System</a>
+        <a href="Home.html">Home</a>
+        <a href="Gallery.html">Gallery</a>
+        <a href="Schedule.html">Schedule</a>
+        <a href="new.html">Example</a>
+        <a href="ActivityContact.html">Contact</a>
+        <a href="CalClock.html">CalClock</a>
+    </div>
+
+    
+    <form action="#" style="background-color: aqua;" onsubmit="return validate()">
+        <h3>This is my FORM</h3>
+
+        <label for="username">Username</label>
+        <input type="text" name="Username" id="username" placeholder="Username">
+        <br>
+
+        <label for="password">Password</label>
+        <input type="password" name="password" id="password" placeholder="Password">
+        <br>
+
+        <button type="submit" name="submit">Submit</button>
+    </form>
+
+    <form action="#" onsubmit="return registration()">
+        <h3>Registration</h3>
+
+        <label for="email">Email</label>
+        <input type="email" name="email" id="email" placeholder="Example@gmail.com" required>
+        <br>
+
+        <p>Gender
+            <input type="radio" name="gender" value="Male" checked> Male
+            <input type="radio" name="gender" value="Female"> Female
+        </p>
+
+        <p>Genre
+            <input type="checkbox" name="genre" value="Rock"> Rock
+            <input type="checkbox" name="genre" value="Hiphop"> Hiphop
+            <input type="checkbox" name="genre" value="Traditional"> Traditional
+        </p>
+
+        <p>Select Music Service
+            <select id="music">
+                <option value="">--Select Music--</option>
+                <option value="Youtube Music">YT music</option>
+                <option value="Spotify">Spotify</option>
+                <option value="itunes">Itunes</option>
+            </select>
+        </p>
+
+        <button type="submit" name="submit">Submit</button>
+    </form>
+
+    
+    <script>
+        function validate() {
+            var username = document.getElementById('username').value;
+            var password = document.getElementById('password').value;
+
+            if (username === "mark" && password === "25123") {
+                alert("Successfully logged in! \nUsername: " + username + "\nPassword: " + password);
+            } else {
+                alert("Invalid Username or Password");
+            }
+
+            return false;
+        }
+
+        function registration() {
+            var email = document.getElementById('email').value;
+            var gender = document.querySelector('input[name="gender"]:checked').value;
+
+            var genres = document.querySelectorAll('input[name="genre"]:checked');
+            var genreValues = Array.from(genres).map(g => g.value).join(', ');
+
+            var music = document.getElementById('music').value;
+
+            alert("Email: " + email + "\nGender: " + gender + "\nGenre(s): " + genreValues + "\nMusic Service: " + music);
+
+            return false;
+        }
+    </script>
+</body>
+</html>

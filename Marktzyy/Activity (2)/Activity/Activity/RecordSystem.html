@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Media Record System</title>
+  <style>
+    
+    .nav-activities {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background-color: rgb(158, 163, 163);
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      padding: 15px 0;
+      border-style: double;
+      z-index: 999;
+    }
+
+    .nav-activities a {
+      text-decoration: none;
+      color: black;
+      background-color: #FFE156;
+      padding: 10px 15px;
+      border: 2px solid black;
+      border-radius: 5px;
+      font-weight: bold;
+      transition: background-color 0.3s;
+    }
+
+    .nav-activities a:hover {
+      background-color: #FFB830;
+      color: white;
+    }
+
+    
+    body {
+      padding-top: 90px;
+      font-family: Arial, sans-serif;
+      background-color: #f2f2f2;
+      margin: 0;
+    }
+
+    
+    img {
+      display: block;
+      max-width: 200px;
+      margin: 20px auto;
+    }
+
+    
+    .container {
+      max-width: 800px;
+      margin: auto;
+      background-color: #fff;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    form input,
+    form select,
+    form button {
+      padding: 10px;
+      font-size: 1em;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+
+    form button {
+      background-color: #4CAF50;
+      color: white;
+      cursor: pointer;
+    }
+
+    form button:hover {
+      background-color: #45a049;
+    }
+
+    
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 20px;
+    }
+
+    table, th, td {
+      border: 1px solid black;
+    }
+
+    th, td {
+      padding: 8px;
+      text-align: left;
+    }
+
+    h3 {
+      text-align: center;
+      margin-top: 40px;
+    }
+  </style>
+</head>
+<body>
+
+  
+  <div class="nav-activities">
+    <a href="Lesson.html">Lesson</a>
+    <a href="Resume.html">Resume</a>
+    <a href="Gallery.html">Gallerry</a>
+    <a href="Home.html">Home</a>
+    <a href="new.html">Example</a>
+    <a href="Schedule.html">Schedule</a>
+    <a href="ActivityContact.html">Contact</a>
+    <a href="login&registration.html">Login</a>
+    <a href="CalClock.html">CalClock</a>
+  </div>
+
+  
+  <img src="system.png" alt="poster" title="logo">
+
+  
+  <div class="container">
+    <form id="mediaForm">
+      <input type="text" id="title" placeholder="Title" required>
+      <input type="text" id="episodes" placeholder="Episodes Range" required>
+      <input type="url" id="link" placeholder="Link" required>
+      <select id="type">
+        <option>Anime</option>
+        <option>K-Drama</option>
+        <option>Movie</option>
+      </select>
+      <button type="submit">Save</button>
+    </form>
+
+    <h3>Media Records</h3>
+    <table id="mediaTable">
+      <tr>
+        <th>Title</th>
+        <th>Episodes</th>
+        <th>Link</th>
+        <th>Type</th>
+        <th>Action</th>
+      </tr>
+    </table>
+  </div>
+
+  
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const form = document.getElementById("mediaForm");
+      const table = document.getElementById("mediaTable");
+
+      let mediaList = JSON.parse(localStorage.getItem("mediaList")) || [];
+
+      function renderTable() {
+        table.innerHTML = `
+          <tr>
+            <th>Title</th>
+            <th>Episodes</th>
+            <th>Link</th>
+            <th>Type</th>
+            <th>Action</th>
+          </tr>
+        `;
+        mediaList.forEach((item, index) => {
+          let row = table.insertRow();
+          row.insertCell(0).innerText = item.title;
+          row.insertCell(1).innerText = item.episodes;
+          row.insertCell(2).innerHTML = `<a href="${item.link}" target="_blank">Watch</a>`;
+          row.insertCell(3).innerText = item.type;
+          row.insertCell(4).innerHTML = `<button onclick="deleteItem(${index})">Delete</button>`;
+        });
+      }
+
+      form.addEventListener("submit", function(event) {
+        event.preventDefault();
+        let title = document.getElementById("title").value.trim();
+        let episodes = document.getElementById("episodes").value.trim();
+        let link = document.getElementById("link").value.trim();
+        let type = document.getElementById("type").value;
+
+        if (title && episodes && link) {
+          mediaList.push({ title, episodes, link, type });
+          localStorage.setItem("mediaList", JSON.stringify(mediaList));
+          renderTable();
+          form.reset();
+        }
+      });
+
+      window.deleteItem = function(index) {
+        mediaList.splice(index, 1);
+        localStorage.setItem("mediaList", JSON.stringify(mediaList));
+        renderTable();
+      }
+
+      renderTable();
+    });
+  </script>
+
+</body>
+</html>

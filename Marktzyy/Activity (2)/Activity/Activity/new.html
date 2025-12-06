@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Example</title>
+    <style>
+        body {
+            background-color: #003B46;
+            color: #fff;
+            margin: 0;
+            font-family: 'Times New Roman', Times, serif;
+            cursor: url("../img/panda.png") 11 11, pointer;
+            padding-top: 80px;
+        }
+
+        .nav-activities {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background-color: rgb(158, 163, 163);
+            font-family: 'Times New Roman', Times, serif;
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            padding: 10px 0;
+            border-style: double;
+            z-index: 1000;
+        }
+
+        .nav-activities a {
+            text-decoration: none;
+            color: black;
+            background-color: #FFE156;
+            padding: 10px 15px;
+            border: 2px solid black;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+
+        .nav-activities a:hover {
+            background-color: #FFB830;
+            color: white;
+        }
+
+        section {
+            background-color: #E0FFFF;
+            text-align: center;
+            border-radius: 30px;
+            margin: 20px;
+            padding: 20px;
+            color: black;
+            box-shadow: 0 0 15px #00CED1;
+        }
+
+        figure {
+            margin: 10px;
+            text-align: center;
+            border-radius: 20px;
+            overflow: hidden;
+            border: 3px solid #FFE156;
+            background-color: white;
+        }
+
+        figure img {
+            width: 100%;
+            display: block;
+            border-bottom: 3px solid #FFE156;
+        }
+
+        figcaption {
+            font-weight: bold;
+            padding: 5px;
+            background-color: #FFE156;
+            color: #000;
+        }
+
+        hr {
+            border: 2px solid #801280;
+            margin: 30px 0;
+        }
+
+        h1, h2, h3 {
+            color: #578127;
+        }
+
+        table {
+            margin: auto;
+            background-color: #fff;
+            color: black;
+            border-collapse: collapse;
+        }
+
+        table td, table th {
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    
+    <div class="nav-activities">
+        <a href="Lesson.html">Lesson</a>
+        <a href="Resume.html">Resume</a>
+        <a href="RecordSystem.html">System</a>
+        <a href="Home.html">Home</a>
+        <a href="Gallery.html">Gallery</a>
+        <a href="Schedule.html">Schedule</a>
+        <a href="ActivityContact.html">Contact</a>
+        <a href="login&registration.html">login</a>
+        <a href="CalClock.html">CalClock</a>
+    </div>
+
+    
+    <section>
+        <center>
+            <div style="display: flex; background-color: aqua;">
+                <figure>
+                    <img src="img/jimin.gif" alt="jimin" width="50%">
+                    <figcaption>KARINA</figcaption>
+                </figure>
+                <figure>
+                    <img src="img/Yu.gif" alt="jimin" width="45%">
+                    <figcaption>KARINA</figcaption>
+                </figure>
+                <figure>
+                    <img src="img/jimin.gif" alt="jimin" width="50%">
+                    <figcaption>KARINA</figcaption>
+                </figure>
+            </div>
+
+            <div style="display: flex; background-color: blueviolet;">
+                <figure>
+                    <img src="img/jimin.gif" alt="jimin" width="50%">
+                    <figcaption>KARINA</figcaption>
+                </figure>
+                <figure>
+                    <img src="img/Yu.gif" alt="jimin" width="45%">
+                    <figcaption>KARINA</figcaption>
+                </figure>
+                <figure>
+                    <img src="img/jimin.gif" alt="jimin" width="50%">
+                    <figcaption>KARINA</figcaption>
+                </figure>
+            </div>
+        </center>
+
+        <hr>
+        <h1>TABLES:</h1>
+        <table width="100%" cellpadding="15" cellspacing="10" border="2">
+            <thead style="background: rgb(172, 173, 68);">
+                <tr>
+                    <td align="center"><strong>NAME</strong></td>
+                    <td align="center"><strong>AGE</strong></td>
+                    <td align="center"><strong>ADDRESS</strong></td>
+                </tr>
+            </thead>
+            <tbody style="background-color: aquamarine;">
+                <tr align="center">
+                    <td width="50%">john rooselevant nibato</td>
+                    <td>25</td>
+                    <td rowspan="3" bgcolor="red">Olivarez</td>
+                </tr>
+                <tr align="center">
+                    <td>carlo</td>
+                    <td>24</td>
+                </tr>
+                <tr align="center">
+                    <td>carlo</td>
+                    <td>24</td>
+                </tr>
+            </tbody>
+            <tfoot style="background: rgb(240, 189, 189);">
+                <tr>
+                    <td colspan="3" align="center">WELCOME TO MY TABLE</td>
+                </tr>
+            </tfoot>
+        </table>
+    </section>
+</body>
+</html>

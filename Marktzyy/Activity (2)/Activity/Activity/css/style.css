@@ -1,0 +1,115 @@
+body { 
+    background-color: #003B46; 
+    color: #fff; 
+    margin: 0; 
+    font-family: 'Times New Roman', Times, serif; 
+    cursor:url("../img/panda.png")11 11, pointer;
+}  
+nav { 
+    background-color: #CAF7E3; 
+}  
+.buttons { 
+    text-align: center; 
+    font-family: 'Times New Roman', Times, serif; 
+} 
+a { 
+    text-decoration: none; 
+    color: black; 
+    font-weight: bold; 
+    padding: 10px 15px; 
+    background-color: #FFE156; 
+    border-radius: 10px; 
+    margin: 5px; 
+    display: inline-block; 
+    transition: background-color 0.3s; 
+} 
+a:hover { 
+    background-color: #FFB830; 
+} 
+section { 
+    background-color: #E0FFFF; 
+    text-align: center; 
+    border-radius: 30px; 
+    margin: 20px; 
+    padding: 20px; 
+    color: black; 
+    box-shadow: 0 0 15px #00CED1; 
+} 
+.pic { 
+    padding: 10px; 
+    margin: 20px; 
+    border: 5px dashed white; 
+    border-image: url("../img/design.gif") 40 stretch; 
+    background: linear-gradient(to right, #FFC3A0, #FFAFBD); 
+    border-radius: 10px; 
+    box-shadow: 0 0 20px #753a58; 
+    text-align: center; color: black; }  
+    figure { 
+        margin: 10px; 
+        text-align: center; 
+        border-radius: 20px; 
+        overflow: hidden; 
+        border: 3px solid #FFE156; 
+        background-color: white; } 
+    figure img { 
+        width: 100%; 
+        display: block; 
+        border-bottom: 3px solid #FFE156; 
+    } 
+    figcaption { 
+        font-weight: bold; 
+        padding: 5px; 
+        background-color: #FFE156; color: #000; 
+    }  
+    ul { 
+        list-style-type: square; 
+        margin-left: 30px; 
+        text-align: left; 
+        color: rgb(79, 160, 47); 
+    }  
+    h1, h2, h3 { 
+        color: #578127; 
+    } 
+    hr { 
+        border: 2px solid #801280; 
+        margin: 30px 0; 
+    }
+    .about{
+        padding:20px;
+    }
+    .about li{
+        font: 2am;
+    }
+    .about ul{
+        padding: 0 20px;
+        list-style-type: inside;
+        list-style-image: url("../img/karinaa.jpg");
+    }
+    .nav-activities {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background-color: rgb(158, 163, 163);
+            font-family: 'Times New Roman', Times, serif;
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            padding: 10px 0;
+            border-style: double;
+            z-index: 1000;
+        }
+
+        .nav-activities a {
+            text-decoration: none;
+            color: black;
+            background-color: #FFE156;
+            padding: 10px 15px;
+            border: 2px solid black;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+
+        .nav-activities a:hover {
+            background-color: #FFB830;
+            color: white;
+        }

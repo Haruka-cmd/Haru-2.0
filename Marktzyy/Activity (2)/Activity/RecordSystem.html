@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Media Record System</title>
+<style>
+    table { width: 100%; border-collapse: collapse; margin-top: 15px; }
+    table, th, td { border: 1px solid black; }
+    th, td { padding: 8px; text-align: left; }
+</style>
+</head>
+<body>
+<img src="system.png" alt="poster">
+<form id="mediaForm">
+    <input type="text" id="title" placeholder="Title" required>
+    <input type="text" id="episodes" placeholder="Episodes Range" required>
+    <input type="url" id="link" placeholder="Link" required>
+    <select id="type">
+    <option>Anime</option>
+    <option>K-Drama</option>
+    <option>Movie</option>
+    </select>
+    <button type="submit">Save</button>
+</form>
+
+<h3>Media Records</h3>
+<table id="mediaTable">
+    <tr>
+    <th>Title</th>
+    <th>Episodes</th>
+    <th>Link</th>
+    <th>Type</th>
+    <th>Action</th>
+    </tr>
+</table>
+
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+    const form = document.getElementById("mediaForm");
+    const table = document.getElementById("mediaTable");
+
+    // loads the saved data in the table
+    let mediaList = JSON.parse(localStorage.getItem("mediaList")) || [];
+
+    function renderTable() {
+        table.innerHTML = `
+        <tr>
+            <th>Title</th>
+            <th>Episodes</th>
+            <th>Link</th>
+            <th>Type</th>
+            <th>Action</th>
+        </tr>
+        `;
+        mediaList.forEach((item, index) => {
+        let row = table.insertRow();
+        row.insertCell(0).innerText = item.title;
+        row.insertCell(1).innerText = item.episodes;
+        row.insertCell(2).innerHTML = `<a href="${item.link}" target="_blank">Watch</a>`;
+        row.insertCell(3).innerText = item.type;
+        row.insertCell(4).innerHTML = `<button onclick="deleteItem(${index})">Delete</button>`;
+        });
+    }
+
+    form.addEventListener("submit", function(event) {
+        event.preventDefault(); // to prevent saved data being erased if you're going to reload it
+        let title = document.getElementById("title").value.trim();
+        let episodes = document.getElementById("episodes").value.trim();
+        let link = document.getElementById("link").value.trim();
+        let type = document.getElementById("type").value;
+
+        if (title && episodes && link) {
+        mediaList.push({ title, episodes, link, type });
+        localStorage.setItem("mediaList", JSON.stringify(mediaList));
+        renderTable();
+        form.reset();
+        }
+    });
+
+    window.deleteItem = function(index) {
+        mediaList.splice(index, 1);
+        localStorage.setItem("mediaList", JSON.stringify(mediaList));
+        renderTable();
+    }
+
+    renderTable();
+    });
+</script>
+</body>
+<footer>
+    <h3>ACTIVITIES:</h3>
+    <li><a href="Website.html">Back</a></li>
+    <li><a href="Lesson.html">Lesson</a></li>
+</footer>
+</html>

@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+* { margin:0; padding:0; box-sizing:border-box; font-family:"Poppins",sans-serif; }
+body { background:#111; color:white; overflow-x:hidden; }
+
+header {
+  display:flex; justify-content:space-between; align-items:center;
+  background:#1a1a1a; padding:10px 30px; border-bottom:2px solid #441c9b;
+}
+nav { display:flex; gap:20px; }
+nav a {
+  text-decoration:none; color:#bbb; padding:10px 25px; border-radius:50px;
+  background:#3a0ca3; border:2px solid #6d23f0; position:relative; transition:0.3s;
+  font-weight:bold;
+}
+nav a::before {
+  content:""; position:absolute; inset:0; border-radius:50px;
+  background:radial-gradient(circle,#a463f2,#2b0d68);
+  filter:blur(10px); opacity:0; transition:0.4s;
+}
+nav a:hover::before{opacity:1;animation:spinGlow 3s linear infinite;}
+nav a:hover{color:white;box-shadow:0 0 20px #7a28ff;}
+.profile-spin{
+  width:70px;height:70px;border-radius:50%;border:2px solid #9f7ff5;
+  animation:spinSlow 10s linear infinite;
+}
+
+.about-container{
+  display:flex;justify-content:space-around;align-items:center;
+  padding:80px 20px;gap:50px;
+}
+.left-card{
+  background:#2b006e;border-radius:25px;padding:30px;text-align:center;
+}
+.image-placeholder{
+  width:200px;height:250px;background:linear-gradient(#a463f2,#3c096c);
+  border-radius:10px;margin-bottom:15px;
+
+  
+  background-image: url("../img/markzzy.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  box-shadow: 0 0 20px rgba(128, 0, 255, 0.5);
+  
+}
+
+.info p{background:#9d4edd;border-radius:20px;padding:8px;margin:6px;}
+.right-text{
+  background:linear-gradient(135deg,#10002b,#3c096c);
+  border-radius:25px;padding:40px;max-width:600px;
+  font-size:1.1em;line-height:1.5;
+}
+.right-text span{color:#c77dff;font-weight:600;}
+
+footer{display:flex;justify-content:center;margin-top:60px;}
+.emblems{display:flex;gap:30px;align-items:center;}
+.emblems img{width:80px;filter:drop-shadow(0 0 8px #b46bff);
+  animation:glowPulse 2s infinite alternate;}
+.aespa-logo{width:120px;}
+
+.corner-light{
+  position:fixed;width:200px;height:200px;
+  background:radial-gradient(circle,rgba(162,99,255,0.3),transparent 70%);
+  border-radius:50%;animation:moveLight 8s linear infinite;mix-blend-mode:lighten;
+}
+.light1{top:-50px;left:-50px;animation-delay:0s;}
+.light2{bottom:-50px;right:-50px;animation-delay:4s;}
+
+@keyframes spinSlow{from{transform:rotate(0);}to{transform:rotate(360deg);}}
+@keyframes spinGlow{from{transform:rotate(0);}to{transform:rotate(360deg);}}
+@keyframes glowPulse{from{filter:drop-shadow(0 0 4px #7a28ff);}
+to{filter:drop-shadow(0 0 15px #b46bff);}}
+@keyframes moveLight{0%{transform:rotate(0)translate(0,0);}
+50%{transform:rotate(180deg)translate(20px,20px);}
+100%{transform:rotate(360deg)translate(0,0);}}

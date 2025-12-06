@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Document</title>
+  <style>
+    body {
+      margin: 0;
+      padding-top: 100px;
+      background-color: #002b36;
+      font-family: 'Georgia', 'Times New Roman', Times, serif;
+      color: #fff;
+    }
+
+    .nav-activities {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background-color: rgb(158, 163, 163);
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      padding: 15px 0;
+      border-style: double;
+      z-index: 1000;
+    }
+
+    .nav-activities a {
+      text-decoration: none;
+      color: black;
+      background-color: #FFE156;
+      padding: 10px 15px;
+      border: 2px solid black;
+      border-radius: 5px;
+      font-weight: bold;
+      transition: background-color 0.3s;
+    }
+
+    .nav-activities a:hover {
+      background-color: #FFB830;
+      color: white;
+    }
+
+    table {
+      margin: auto;
+      border-collapse: collapse;
+      border: 5px solid green;
+      background-color: white;
+      color: black;
+      box-shadow: 0 0 15px rgba(0, 255, 0, 0.5);
+    }
+
+    th {
+      font-size: x-large;
+      color: blue;
+      background-color: wheat;
+      padding: 15px;
+    }
+
+    td {
+      text-align: center;
+      padding: 15px;
+      font-weight: bold;
+    }
+
+    thead td {
+      background-color: gray;
+      color: white;
+    }
+
+    thead tr:nth-child(2) td {
+      background-color: lightgray;
+      color: black;
+    }
+
+    td[rowspan] {
+      vertical-align: middle;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="nav-activities">
+    <a href="Lesson.html">Lesson</a>
+    <a href="new.html">Example</a>
+    <a href="RecordSystem.html">System</a>
+    <a href="Home.html">Home</a>
+    <a href="Gallery.html">Gallery</a>
+    <a href="Resume.html">Resume</a>
+    <a href="ActivityContact.html">Contact</a>
+    <a href="login&registration.html">login</a>
+    <a href="CalClock.html">CalClock</a>
+  </div>
+
+  <table align="center" width="15" cellpadding="15" bordercolor="green" border="5">
+    <thead bgcolor="yellow" cellpadding="50" cellspacing="50">
+      <tr>
+        <th bgcolor="wheat" style="font-size:x-large; color: Blue;" colspan="7">SCHEDULE</th>
+      </tr>
+      <tr>
+        <td bgcolor="gray">TIME</td>
+        <td>MONDAY</td>
+        <td>TUESDAY</td>
+        <td>WEDNESDAY</td>
+        <td>THURSDAY</td>
+        <td>FRIDAY</td>
+        <td>SATURDAY</td>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td bgcolor="gray">7:00-8:00</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td rowspan="3" bgcolor="yellow">PE21 <br>SALAS,RENZ <br>NEW BLDG504</td>
+        <td rowspan="3" bgcolor="yellow">IT211 <br>Lecture <br> Section-D</td>
+      </tr>
+      <tr>
+        <td bgcolor="gray">8:00-9:00</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td bgcolor="gray">9:00-10:00</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td bgcolor="gray">10:00-11:00</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td rowspan="3" bgcolor="yellow">SS102 <br>ARELLA <br>NEW BLDG504</td>
+        <td rowspan="3" bgcolor="green">IT211 <br>Labratory <br> Section-D</td>
+      </tr>
+      <tr>
+        <td bgcolor="gray">11:00-12:00</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td bgcolor="gray">12:00-01:00</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td bgcolor="gray">01:00-02:00</td>
+        <td rowspan="2" bgcolor="yellow">CIS212 <br>Lecture <br>Section-D</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td bgcolor="gray">02:00-03:00</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td bgcolor="gray">03:00-04:00</td>
+        <td bgcolor="green" rowspan="3">CIS212 <br>Labratory <br> Section-D</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td rowspan="2" bgcolor="yellow">IT212 <br>Lecture <br>Section-D</td>
+      </tr>
+      <tr>
+        <td bgcolor="gray">04:00-05:00</td>
+        <td></td>
+        <td></td>
+        <td style="background-color:rgb(0, 247, 255);" rowspan="3">OLIV201 <br>Lecture <br>Section-D</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td bgcolor="gray">05:00-06:00</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td rowspan="3" bgcolor="green">IT212 <br>Laboratory <br>Section-D</td>
+      </tr>
+      <tr>
+        <td bgcolor="gray">06:00-07:00</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td bgcolor="gray">07:00-08:00</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+
+</body>
+</html>

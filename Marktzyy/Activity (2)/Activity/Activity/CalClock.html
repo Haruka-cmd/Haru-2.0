@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator with Clock</title>
+    <link rel="stylesheet" href="css/cal&clock.css">
+</head>
+<body>
+
+<div class="top-nav">
+    <a href="Lesson.html">Lesson</a>
+    <a href="Resume.html">Resume</a>
+    <a href="RecordSystem.html">System</a>
+    <a href="Home.html">Home</a>
+    <a href="Gallery.html">Gallery</a>
+    <a href="Schedule.html">Schedule</a>
+    <a href="new.html">Example</a>
+    <a href="login&registration.html">Login</a>
+    <a href="ActivityContact.html">Contact</a>
+</div>
+
+    
+<div class="main-container">
+
+        
+    <div class="calculator">
+        <input type="text" id="display" class="display" disabled />
+
+        <div class="buttons">
+            <button class="button" onclick="insert('1')">1</button>
+            <button class="button" onclick="insert('2')">2</button>
+            <button class="button" onclick="insert('3')">3</button>
+            <button class="button" onclick="insert('+')">+</button>
+                
+            <button class="button" onclick="insert('4')">4</button>
+            <button class="button" onclick="insert('5')">5</button>
+            <button class="button" onclick="insert('6')">6</button>
+            <button class="button" onclick="insert('-')">-</button>
+                
+            <button class="button" onclick="insert('7')">7</button>
+            <button class="button" onclick="insert('8')">8</button>
+            <button class="button" onclick="insert('9')">9</button>
+            <button class="button" onclick="insert('*')">*</button>
+                
+            <button class="button" onclick="insert('0')">0</button>
+            <button class="button" onclick="backspace()">C</button>
+            <button class="button" onclick="equal()">=</button>
+            <button class="button" onclick="insert('/')">/</button>
+        </div>
+    </div>
+
+        
+    <div class="clock">
+        <div id="clockDisplay" class="clock-display">06:59</div>
+
+        <div class="alarm-controls">
+            <input type="time" id="alarmTime" />
+            <button class="button" onclick="setAlarm()">Set Alarm</button>
+            <button class="button" onclick="stopAlarm()">Stop Alarm</button>
+        </div>
+    </div>
+
+</div> 
+
+<script src="js/Cal&Clock.js"></script>
+
+</body>
+</html>

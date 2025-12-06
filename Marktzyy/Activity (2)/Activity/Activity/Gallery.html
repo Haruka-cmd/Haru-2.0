@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mark's Gallery</title>
+    <style>
+        body {
+            background-color: #003B46;
+            font-family: 'Times New Roman', Times, serif;
+            color: #fff;
+            margin: 0;
+            padding-top: 80px;
+        }
+
+        .nav-activities {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background-color: rgb(158, 163, 163);
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            padding: 15px 0;
+            border-style: double;
+            z-index: 1000;
+        }
+
+        .nav-activities a {
+            text-decoration: none;
+            color: black;
+            background-color: #FFE156;
+            padding: 10px 15px;
+            border: 2px solid black;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: background-color 0.3s;
+        }
+
+        .nav-activities a:hover {
+            background-color: #FFB830;
+            color: white;
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 300%;
+            margin-bottom: 40px;
+        }
+
+        .gallery-section, .all-members-title, .member-title {
+            background-color: #E0FFFF;
+            color: black;
+            border-radius: 20px;
+            margin: 20px;
+            padding: 20px;
+            box-shadow: 0 0 15px #00CED1;
+        }
+
+        .all-members-title, .member-title {
+            font-size: 220%;
+            text-align: center;
+            text-decoration: underline;
+        }
+
+        .gallery-row {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        figure {
+            text-align: center;
+            color: black;
+            cursor: pointer;
+            background-color: white;
+            border-radius: 10px;
+            padding: 10px;
+            box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.4);
+        }
+
+        figure img {
+            width: 200px;
+            height: 250px;
+            object-fit: cover;
+            border-radius: 10px;
+            transition: transform 0.3s;
+            display: block;
+        }
+
+        figure img:hover {
+            transform: scale(1.05);
+        }
+
+        figcaption {
+            margin-top: 8px;
+            font-size: 120%;
+            font-weight: bold;
+        }
+
+        hr {
+            border: 2px solid #801280;
+            margin: 40px auto;
+            width: 60%;
+        }
+
+        .video-container,
+        .audio-container,
+        .map-container {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 40px;
+            text-align: center;
+        }
+
+        .audio-container figure {
+            margin: 0 10px;
+        }
+
+        .audio-container figcap {
+            display: block;
+            margin-top: 5px;
+            color: white;
+        }
+
+        .map-container iframe {
+            border-radius: 10px;
+            box-shadow: 0 0 15px #00CED1;
+        }
+
+        .lightbox {
+            display: none;
+            position: fixed;
+            z-index: 9999;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            justify-content: center;
+            align-items: center;
+        }
+
+        .lightbox img {
+            max-width: 90%;
+            max-height: 90%;
+            border-radius: 10px;
+            box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.5);
+        }
+
+        p a {
+            color: #FFE156;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        p a:hover {
+            color: #FFB830;
+        }
+    </style>
+</head>
+<body>
+    <div class="nav-activities">
+        <a href="Lesson.html">Lesson</a>
+        <a href="Resume.html">Resume</a>
+        <a href="RecordSystem.html">System</a>
+        <a href="Home.html">Home</a>
+        <a href="new.html">Example</a>
+        <a href="Schedule.html">Schedule</a>
+        <a href="ActivityContact.html">contact</a>
+        <a href="login&registration.html">login</a>
+        <a href="CalClock.html">CalClock</a>
+    </div>
+
+    <h1 align="center" style="background-color: rgb(20, 19, 26);">Mark's Gallery</h1>
+    <hr>
+
+    <div class="all-members-title">
+        <div class="all-members">Aespa</div>
+        <div class="gallery-row">
+            <figure>
+                <img src="img/arma.jpg" alt="Aespa">
+                <figcaption>Aespa</figcaption>
+            </figure>
+            <figure>
+                <img src="img/dirtywork.jpg" alt="Aespa">
+                <figcaption>Aespa</figcaption>
+            </figure>
+            <figure>
+                <img src="img/dram.jpg" alt="Aespa">
+                <figcaption>Aespa</figcaption>
+            </figure>
+        </div>
+    </div>
+
+    <hr>
+
+    <div class="gallery-section">
+        <div class="member-title">Karina</div>
+        <div class="gallery-row">
+            <figure>
+                <img src="img/jiji.jpg" alt="karina">
+                <figcaption>Karina</figcaption>
+            </figure>
+            <figure>
+                <img src="img/jijiji.jpg" alt="karina">
+                <figcaption>Karina</figcaption>
+            </figure>
+            <figure>
+                <img src="img/karinaa.jpg" alt="karina">
+                <figcaption>Karina</figcaption>
+            </figure>
+            <figure>
+                <img src="img/rina.jpg" alt="karina">
+                <figcaption>Karina</figcaption>
+            </figure>
+        </div>
+    </div>
+
+    <hr>
+
+    <div class="gallery-section">
+        <div class="member-title">Winter</div>
+        <div class="gallery-row">
+            <figure>
+                <img src="img/kim.jpg" alt="winter">
+                <figcaption>Winter</figcaption>
+            </figure>
+            <figure>
+                <img src="img/wintter.jpg" alt="winter">
+                <figcaption>Winter</figcaption>
+            </figure>
+            <figure>
+                <img src="img/winttter.jpg" alt="winter">
+                <figcaption>Winter</figcaption>
+            </figure>
+            <figure>
+                <img src="img/wint.jpg" alt="winter">
+                <figcaption>Winter</figcaption>
+            </figure>
+        </div>
+    </div>
+
+    <hr>
+
+    <div class="gallery-section">
+        <div class="member-title">Ningning</div>
+        <div class="gallery-row">
+            <figure>
+                <img src="img/nggg.jpg" alt="ningning">
+                <figcaption>Ningning</figcaption>
+            </figure>
+            <figure>
+                <img src="img/nng.jpg" alt="ningning">
+                <figcaption>Ningning</figcaption>
+            </figure>
+            <figure>
+                <img src="img/ning.jpg" alt="ningning">
+                <figcaption>Ningning</figcaption>
+            </figure>
+            <figure>
+                <img src="img/ningning.jpg" alt="ningning">
+                <figcaption>Ningning</figcaption>
+            </figure>
+        </div>
+    </div>
+
+    <hr>
+
+    <div class="gallery-section">
+        <div class="member-title">Giselle</div>
+        <div class="gallery-row">
+            <figure>
+                <img src="img/gigi.jpg" alt="Giselle">
+                <figcaption>Giselle</figcaption>
+            </figure>
+            <figure>
+                <img src="img/gigigi.jpg" alt="Giselle">
+                <figcaption>Giselle</figcaption>
+            </figure>
+            <figure>
+                <img src="img/giselle.jpg" alt="Giselle">
+                <figcaption>Giselle</figcaption>
+            </figure>
+            <figure>
+                <img src="img/gisellee.jpg" alt="Giselle">
+                <figcaption>Giselle</figcaption>
+            </figure>
+        </div>
+    </div>
+
+    <hr>
+
+    <h2 style="text-align: center;">AESPA RICHMAN & ALBUM AUDIO</h2>
+
+    <div class="video-container">
+        <figure>
+            <video src="video/richman.mp4" controls width="450"></video>
+            <figcaption>AESPA-RICHMAN</figcaption>
+        </figure>
+    </div>
+
+    <div class="audio-container">
+        <figure>
+            <audio src="audio/Angel.mp3" controls></audio>
+            <figcap>6TH Album ANGEL#48</figcap>
+        </figure>
+        <figure>
+            <audio src="audio/Bubble.mp3" controls></audio>
+            <figcap>6TH Album BUBBLE</figcap>
+        </figure>
+        <figure>
+            <audio src="audio/CountonMe.mp3" controls></audio>
+            <figcap>6TH Album COUNT ON ME</figcap>
+        </figure>
+        <figure>
+            <audio src="audio/Drift.mp3" controls></audio>
+            <figcap>6TH Album DRIFT</figcap>
+        </figure>
+        <figure>
+            <audio src="audio/TotheGirls.mp3" controls></audio>
+            <figcap>6TH Album TO THE GIRLS</figcap>
+        </figure>
+    </div>
+
+    <hr>
+
+    <div class="map-container">
+        <figure>
+            <iframe src="https://www.aespa.com/" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            <h2 align="center" style="color: antiquewhite;">MAP</h2>
+        </figure>
+    </div>
+
+    <p style="text-align: center;"><a href="https://www.youtube.com/channel/UC9GtSLeksfK4yuJ_g1lgQbg">&copy; AESPA</a></p>
+
+    <div class="lightbox" id="lightbox">
+        <img src="" alt="zoomed">
+    </div>
+
+    <script>
+        const lightbox = document.getElementById("lightbox");
+        const lightboxImg = lightbox.querySelector("img");
+
+        document.querySelectorAll("figure img").forEach(img => {
+            img.addEventListener("click", () => {
+                lightbox.style.display = "flex";
+                lightboxImg.src = img.src;
+                lightboxImg.alt = img.alt;
+            });
+        });
+
+        lightbox.addEventListener("click", () => {
+            lightbox.style.display = "none";
+        });
+    </script>
+</body>
+</html>
